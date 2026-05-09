@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://yoursite.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/volunteer-recruit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-04-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/rebloom</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/artisan-photo-walk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-06-20</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/old-city-lecture</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-21</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/street-photo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-07-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://yoursite.com/events/fashion-show</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+
+</urlset>

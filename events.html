@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活動總覽 — CGM 台中分部志工團・2026 鈴蘭通系列活動</title>
+  <meta name="description" content="CGM 台中分部志工團 2026 年度鈴蘭通系列活動總覽：志工招募、永續時裝 Re-bloom、職人攝影、地方創生講座、街拍工作坊、封街走秀。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="活動總覽 — CGM 台中分部志工團" />
+  <meta property="og:description" content="2026 鈴蘭通系列活動：從文化走讀到永續時裝走秀，6場精彩活動等你參與。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yoursite.com/events.html" />
+  <meta property="og:locale" content="zh_TW" />
+  <link rel="alternate" hreflang="zh-TW" href="https://yoursite.com/events.html" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventSeries",
+    "name": "鈴蘭通散步納涼會 2026 CGM 系列活動",
+    "description": "CGM 台中分部志工團主辦的鈴蘭通系列活動，涵蓋志工招募、永續時裝、攝影工作坊、文化走讀與地方創生講座。",
+    "url": "https://yoursite.com/events.html",
+    "organizer": {
+      "@type": "Organization",
+      "name": "CGM 台中分部志工團",
+      "url": "https://yoursite.com"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "台中市中區鈴蘭通（中山路）",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "台中市",
+        "addressRegion": "中區",
+        "addressCountry": "TW"
+      }
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:  { 50:'#FDF8E1', 100:'#FBF0C0', 200:'#F5DC7A', 300:'#E8C040', 400:'#C8931A', 500:'#A87A10', 600:'#8A6208', 700:'#6A4C06' },
+            terra: { 50:'#FDF0EC', 100:'#FBDDD5', 200:'#F5B9A8', 300:'#EB8E74', 400:'#D96848', 500:'#C25330', 600:'#9E3F23', 700:'#7B2E18' },
+            ink:   { DEFAULT:'#1A1008', light:'#3D2A18' },
+            cream: { DEFAULT:'#F5EFE4', dark:'#EDE5D5' },
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', '"Noto Serif TC"', 'Georgia', 'serif'],
+            serif:   ['"Noto Serif TC"', 'Georgia', 'serif'],
+            sans:    ['"Outfit"', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream:#F5EFE4; --ink:#1A1008; --gold:#C8931A; --white:#FEFCF8; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', 'Noto Sans TC', system-ui, sans-serif;
+      background-color: var(--cream);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #C8931A 0%, #E8C040 50%, #C28010 100%);
+      color: #1A1008;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,147,26,0.45); }
+    .btn-outline {
+      border: 1.5px solid #1A1008;
+      color: #1A1008;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .btn-outline:hover { background: #1A1008; color: #FEFCF8; transform: translateY(-2px); }
+    .gold-line { width:48px; height:3px; background:linear-gradient(90deg,#C8931A,#E8C040); border-radius:2px; }
+    .section-label { font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#9A8472; }
+    .nav-link { position: relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1.5px; background:#C8931A; transition:width 0.25s ease; }
+    .nav-link:hover::after { width: 100%; }
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background:rgba(254,252,248,0.96) !important; backdrop-filter:blur(12px); box-shadow:0 1px 0 rgba(26,16,8,0.08); }
+    .event-card { background:#FEFCF8; border:1px solid rgba(26,16,8,0.08); transition:transform 0.25s ease, box-shadow 0.25s ease; overflow:hidden; }
+    .event-card:hover { transform:translateY(-4px); box-shadow:0 20px 40px rgba(26,16,8,0.12); border-color:rgba(26,16,8,0.15); }
+    .event-card img { transition: transform 0.5s ease; }
+    .event-card:hover img { transform: scale(1.04); }
+    .tag { display:inline-flex; align-items:center; padding:0.2rem 0.65rem; border-radius:999px; font-size:0.7rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; }
+    .tag-gold  { background:#FDF8E1; color:#8A6208; border:1px solid #E8C040; }
+    .tag-terra { background:#FDF0EC; color:#9E3F23; border:1px solid #EB8E74; }
+    .tag-green { background:#EDF5EE; color:#2E6B3A; border:1px solid #7DC48A; }
+    .tag-slate { background:#EEF2F7; color:#2C4A70; border:1px solid #9AB4D5; }
+    .tag-dim   { background:#F2F2F2; color:#6B6B6B; border:1px solid #D0D0D0; }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50" style="background: rgba(245,239,228,0.7); backdrop-filter: blur(8px);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[60px]">
+    <a href="index.html" class="flex items-center gap-2.5 group">
+      <div class="w-7 h-7 rounded-full btn-gold flex items-center justify-center text-xs font-bold leading-none">C</div>
+      <span class="font-serif text-sm font-semibold text-ink tracking-wide hidden sm:block">CGM 台中分部志工團</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-ink/70">
+      <a href="index.html#about"   class="nav-link hover:text-ink">關於我們</a>
+      <a href="events.html"        class="nav-link text-ink font-medium">活動總覽</a>
+      <a href="index.html#events"  class="nav-link hover:text-ink">活動資訊</a>
+      <a href="index.html#contact" class="nav-link hover:text-ink">聯絡我們</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://www.accupass.com/event/2604251225463100249630" target="_blank" rel="noopener"
+         class="btn-gold px-5 py-2 rounded-full text-xs">立即報名</a>
+      <button id="menu-btn" class="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-1.5 cursor-pointer" aria-label="選單">
+        <span class="block w-5 h-0.5 bg-ink rounded transition-all duration-300"></span>
+        <span class="block w-5 h-0.5 bg-ink rounded transition-all duration-300"></span>
+        <span class="block w-3 h-0.5 bg-ink rounded transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden border-t border-ink/8 bg-cream/98 px-5 py-5 flex flex-col gap-4 text-sm">
+    <a href="index.html#about"   class="text-ink/70 hover:text-ink py-1 font-medium">關於我們</a>
+    <a href="events.html"        class="text-ink font-semibold py-1">活動總覽</a>
+    <a href="index.html#events"  class="text-ink/70 hover:text-ink py-1 font-medium">活動資訊</a>
+    <a href="index.html#contact" class="text-ink/70 hover:text-ink py-1 font-medium">聯絡我們</a>
+    <a href="https://www.accupass.com/event/2604251225463100249630" target="_blank" rel="noopener"
+       class="btn-gold px-5 py-2.5 rounded-full text-center text-xs">立即報名</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════
+     PAGE HEADER
+════════════════════════════════════════ -->
+<header class="pt-28 pb-16" style="background:linear-gradient(135deg,#F5EFE4 0%,#EDE5D5 50%,#FDF8E1 100%);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center gap-2 text-xs text-ink/40 mb-8">
+      <a href="index.html" class="hover:text-ink/70 transition-colors">首頁</a>
+      <span>/</span>
+      <span class="text-ink/70">活動總覽</span>
+    </div>
+
+    <div class="max-w-2xl">
+      <p class="section-label mb-3">2026 Event Series</p>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-ink mb-5 leading-tight">
+        鈴蘭通<br>
+        <span class="text-gold-400">系列活動</span>
+      </h1>
+      <div class="gold-line mb-6" style="margin:0 0 1.5rem 0;"></div>
+      <p class="text-ink/70 leading-relaxed text-base mb-4">
+        CGM 台中分部志工團 2026 年年度計畫——以台中舊城鈴蘭通為場域，從文化走讀到永續時裝走秀，6 場精彩活動，邀請 15–25 歲青年一同參與。
+      </p>
+      <p class="text-ink/40 text-sm">主辦：CGM 台中分部志工團・合作：臺中市新富町地方創生協會・青年永續領導力發展協會</p>
+    </div>
+  </div>
+</header>
+
+<!-- Timeline bar -->
+<div class="bg-white border-y border-ink/8 overflow-x-auto">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center gap-0 min-w-max py-4">
+      <div class="flex items-center gap-2 px-4 border-r border-ink/8">
+        <div class="w-2 h-2 rounded-full bg-gold-400"></div>
+        <span class="text-xs text-ink/60 whitespace-nowrap">4–5月 志工招募</span>
+      </div>
+      <div class="flex items-center gap-2 px-4 border-r border-ink/8">
+        <div class="w-2 h-2 rounded-full bg-terra-400"></div>
+        <span class="text-xs text-ink/60 whitespace-nowrap">5–10月 Re-bloom</span>
+      </div>
+      <div class="flex items-center gap-2 px-4 border-r border-ink/8">
+        <div class="w-2 h-2 rounded-full bg-gold-400"></div>
+        <span class="text-xs text-ink/60 whitespace-nowrap">6/20 職人攝影</span>
+      </div>
+      <div class="flex items-center gap-2 px-4 border-r border-ink/8">
+        <div class="w-2 h-2 rounded-full bg-terra-400"></div>
+        <span class="text-xs text-ink/60 whitespace-nowrap">6/21 地方講座</span>
+      </div>
+      <div class="flex items-center gap-2 px-4 border-r border-ink/8">
+        <div class="w-2 h-2 rounded-full bg-gold-400"></div>
+        <span class="text-xs text-ink/60 whitespace-nowrap">7/25 街拍工作坊</span>
+      </div>
+      <div class="flex items-center gap-2 px-4">
+        <div class="w-2 h-2 rounded-full bg-ink/20"></div>
+        <span class="text-xs text-ink/30 whitespace-nowrap">10/25–26 時裝走秀</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     EVENTS GRID
+════════════════════════════════════════ -->
+<main class="py-16">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+
+      <!-- ── Event 1: 志工招募 ── -->
+      <article class="event-card rounded-2xl">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=15vDiMdTbqTYoqCIB-HQ2_EdKD-T6EfI6&sz=w600"
+               alt="台中舊城青年志工招募" class="w-full h-52 object-cover">
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-terra">志工招募</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/04/25 – 05/31
+            </div>
+            <span class="text-xs bg-green-50 text-green-600 border border-green-200 px-2 py-0.5 rounded-full">招募中</span>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-2 leading-snug">台中舊城青年志工招募</h2>
+          <p class="text-ink/60 text-sm leading-relaxed mb-3">結合年度盛會「鈴蘭通」，發起給 15–25 歲青年的志工行動計畫。在行動中學習、探索未來方向。</p>
+          <div class="flex items-center gap-1.5 text-xs text-ink/40 mb-4">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            台中市中區・鈴蘭通活動場域
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="tag tag-gold">影像紀錄組</span>
+            <span class="tag tag-gold">走讀導覽組</span>
+            <span class="tag tag-gold">永續手作組</span>
+          </div>
+          <a href="https://www.accupass.com/event/2604251225463100249630" target="_blank" rel="noopener"
+             class="btn-gold px-5 py-2 rounded-full text-sm inline-flex items-center gap-1.5 w-full justify-center">
+            前往報名
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ── Event 2: Re-bloom ── -->
+      <article class="event-card rounded-2xl">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=1KuzyFf2QPzvXF85aSKbkjIErrgs5ynJ8&sz=w600"
+               alt="Re-bloom 重縫計畫" class="w-full h-52 object-cover">
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-gold">永續時裝</span>
+          </div>
+          <div class="absolute top-3 right-3">
+            <span class="bg-gold-400/90 text-ink px-2 py-0.5 rounded-full text-xs font-medium">免費</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/05/02 – 10/17
+            </div>
+            <span class="text-xs bg-green-50 text-green-600 border border-green-200 px-2 py-0.5 rounded-full">招募中</span>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-1 leading-snug">Re-bloom 重縫計畫</h2>
+          <p class="text-terra-500 text-xs font-medium mb-2">永續時裝走秀・素人模特兒志工招募</p>
+          <p class="text-ink/60 text-sm leading-relaxed mb-3">Rebloom 對應鈴蘭通花語——幸福歸來。免費 10 堂走秀培訓，由 11 年資深導師 Sandy 老師親授，登上正式走秀舞台。</p>
+          <div class="flex items-center gap-1.5 text-xs text-ink/40 mb-5">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            16–22 歲女生・素人零經驗歡迎
+          </div>
+          <div class="flex gap-2">
+            <a href="rebloom.html" class="btn-outline px-4 py-2 rounded-full text-sm inline-flex items-center gap-1.5 flex-1 justify-center">活動詳情</a>
+            <a href="https://www.accupass.com/event/2604241429471733364574" target="_blank" rel="noopener"
+               class="btn-gold px-4 py-2 rounded-full text-sm inline-flex items-center gap-1.5 flex-1 justify-center">前往報名</a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ── Event 3: 職人影像採集 ── -->
+      <article class="event-card rounded-2xl">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=1yn3SfvH20k1QzJ-JaKjCBdIx23B3PJmO&sz=w600"
+               alt="職人影像採集｜午後舊城散策" class="w-full h-52 object-cover">
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-terra">文化走讀</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/06/20（六）15:30–18:00
+            </div>
+            <span class="text-xs bg-terra-50 text-terra-600 border border-terra-200 px-2 py-0.5 rounded-full">NT$150</span>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-2 leading-snug">職人影像採集｜午後舊城散策</h2>
+          <p class="text-ink/60 text-sm leading-relaxed mb-3">台中第二市場，藏著跨越三代的職人。透過鏡頭，與職人進行一場世代對話。手機或單眼皆可。</p>
+          <div class="flex items-center gap-1.5 text-xs text-ink/40 mb-5">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            台中第二市場・中山路
+          </div>
+          <a href="https://www.accupass.com/event/2604251331231737529942" target="_blank" rel="noopener"
+             class="btn-gold px-5 py-2 rounded-full text-sm inline-flex items-center gap-1.5 w-full justify-center">
+            前往報名
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ── Event 4: 地方創生講座 ── -->
+      <article class="event-card rounded-2xl">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=1LOMDPK8KlIUaKVG6_e8zDIBXTGwLlYma&sz=w600"
+               alt="地方創生講座：舊城拾光" class="w-full h-52 object-cover">
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-gold">知識講座</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/06/21（日）15:00–17:00
+            </div>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-2 leading-snug">地方創生講座：舊城拾光</h2>
+          <p class="text-ink/60 text-sm leading-relaxed mb-3">「台中鈴蘭通的繁華、衰頹與創生進行式」——從「美麗與哀愁」中尋找下一個百年的街道生命力。</p>
+          <div class="space-y-1.5 mb-5">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              鈴蘭133・台中市中區中山路133號2樓
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              講師：繁運隆（Amos Po），中城再生文化協會理事長
+            </div>
+          </div>
+          <div class="bg-cream rounded-xl p-3 text-center border border-ink/8">
+            <p class="text-xs text-ink/50">報名詳情即將公告，敬請期待</p>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ── Event 5: 中城重逢街拍 ── -->
+      <article class="event-card rounded-2xl">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=1ItMMRRZ5ReGsaz-YXfaEprA-pf2M24aS&sz=w600"
+               alt="中城重逢｜鈴蘭通街拍活動" class="w-full h-52 object-cover">
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-terra">攝影工作坊</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/07/25（六）09:50–13:00
+            </div>
+            <span class="text-xs bg-terra-50 text-terra-600 border border-terra-200 px-2 py-0.5 rounded-full">NT$150</span>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-2 leading-snug">中城重逢｜鈴蘭通街拍活動</h2>
+          <p class="text-ink/60 text-sm leading-relaxed mb-3">市場裡的光影、攤販的手勢、人潮的流動——用手機，練習用影像說一段屬於城市的故事。</p>
+          <div class="space-y-1.5 mb-5">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              地方創生協會新富町・中山路224號
+            </div>
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              手機拍攝即可
+            </div>
+          </div>
+          <a href="https://www.accupass.com/event/2604272341512052554366" target="_blank" rel="noopener"
+             class="btn-gold px-5 py-2 rounded-full text-sm inline-flex items-center gap-1.5 w-full justify-center">
+            前往報名
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ── Event 6: 永續時裝走秀（Coming Soon）── -->
+      <article class="event-card rounded-2xl opacity-80">
+        <div class="relative">
+          <img src="https://drive.google.com/thumbnail?id=1PCEbeTGet22zsTspnvywjgj-jvfYGC3n&sz=w600"
+               alt="鈴蘭重縫永續時裝走秀" class="w-full h-52 object-cover">
+          <div class="absolute inset-0 bg-ink/30"></div>
+          <div class="absolute top-3 left-3">
+            <span class="tag tag-gold">封街展演</span>
+          </div>
+          <div class="absolute top-3 right-3">
+            <span class="bg-ink/70 text-white/80 px-2 py-0.5 rounded-full text-xs">即將公告</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center mb-3">
+            <div class="flex items-center gap-1.5 text-xs text-ink/40">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              2026/10/25–26
+            </div>
+          </div>
+          <h2 class="font-serif text-lg font-semibold text-ink mb-2 leading-snug">鈴蘭重縫永續時裝走秀</h2>
+          <p class="text-ink/60 text-sm leading-relaxed mb-5">2026 年度壓軸大戲——封街展演，素人模特兒與在地長輩共同登台，呈現舊衣新生的永續時裝美學。</p>
+          <div class="flex items-center gap-1.5 text-xs text-ink/40 mb-5">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            台中市中區・鈴蘭通（封街展演）
+          </div>
+          <div class="bg-cream rounded-xl p-3 text-center border border-ink/8">
+            <p class="text-xs text-ink/40">報名詳情即將公告，敬請期待</p>
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     BACK TO HOME CTA
+════════════════════════════════════════ -->
+<section class="py-16 bg-white border-t border-ink/8">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 text-center">
+    <p class="section-label mb-3">Join Us</p>
+    <h2 class="font-display text-2xl font-bold text-ink mb-4">想加入我們？</h2>
+    <p class="text-ink/60 text-sm leading-relaxed mb-7 max-w-lg mx-auto">
+      CGM 台中分部志工團歡迎 15–25 歲青年加入，與我們一同守護台中舊城文化，實踐永續行動。
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="index.html#contact" class="btn-gold px-7 py-3 rounded-full font-medium tracking-wide">加入志工</a>
+      <a href="index.html" class="btn-outline px-7 py-3 rounded-full font-medium tracking-wide">回到首頁</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer style="background:linear-gradient(135deg,#1A1008,#3D2A18);" class="py-12">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full btn-gold flex items-center justify-center flex-shrink-0">
+          <span class="font-sans font-bold text-sm leading-none">C</span>
+        </div>
+        <div>
+          <div class="font-sans text-white text-sm font-semibold">CGM 台中分部志工團</div>
+          <div class="text-white/40 text-xs">台中舊城文化 × 志工行動</div>
+        </div>
+      </div>
+      <div class="flex gap-6 text-sm text-white/50">
+        <a href="index.html#about"   class="hover:text-gold-300 transition-colors">關於我們</a>
+        <a href="events.html"        class="hover:text-gold-300 transition-colors text-white">活動總覽</a>
+        <a href="index.html#events"  class="hover:text-gold-300 transition-colors">活動資訊</a>
+        <a href="index.html#contact" class="hover:text-gold-300 transition-colors">聯絡我們</a>
+      </div>
+      <div class="text-xs text-white/30 text-center">
+        <div>合作：臺中市新富町地方創生協會・青年永續領導力發展協會</div>
+        <div class="mt-1">© 2026 CGM 台中分部志工團. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+</script>
+
+</body>
+</html>

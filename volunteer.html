@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 新富町文化擁護者 | 青年志工招募 – CGM 台中分部</title>
+  <meta name="description" content="在舊城，留下你的名字。2026 CGM 台中分部志工招募，提供影像紀錄、走讀導覽、永續手作、活動執行四組媒合，開放 15–25 歲青年報名。">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:  { 50:'#FDF8E1', 100:'#FBF0C0', 200:'#F5DC7A', 300:'#E8C040', 400:'#C8931A', 500:'#A87A10', 600:'#8A6208', 700:'#6A4C06' },
+            terra: { 50:'#FDF0EC', 100:'#FBDDD5', 200:'#F5B9A8', 300:'#EB8E74', 400:'#D96848', 500:'#C25330', 600:'#9E3F23', 700:'#7B2E18' },
+            ink:   { DEFAULT:'#1A1008', light:'#3D2A18' },
+            cream: { DEFAULT:'#F5EFE4', dark:'#EDE5D5' },
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', '"Noto Serif TC"', 'Georgia', 'serif'],
+            serif:   ['"Noto Serif TC"', 'Georgia', 'serif'],
+            sans:    ['"Outfit"', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F5EFE4;
+      --ink: #1A1008;
+      --gold: #C8931A;
+      --gold-pale: #F0D98B;
+      --stone: #9A8472;
+      --white: #FEFCF8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', 'Noto Sans TC', system-ui, sans-serif;
+      background-color: var(--cream);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #C8931A 0%, #E8C040 50%, #C28010 100%);
+      color: #1A1008;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(200,147,26,0.45);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--ink);
+      color: var(--ink);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .btn-outline:hover {
+      background: var(--ink);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      border: 1.5px solid rgba(255,255,255,0.6);
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    #navbar {
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(254,252,248,0.96) !important;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(26,16,8,0.08);
+    }
+
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1.5px;
+      background: var(--gold);
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .tag-terra { background:#FDF0EC; color:#9E3F23; border: 1px solid #EB8E74; }
+    .tag-gold  { background:#FDF8E1; color:#8A6208; border: 1px solid #E8C040; }
+    .tag-green { background:#EDF5EE; color:#2E6B3A; border: 1px solid #7DC48A; }
+    .tag-slate { background:#EEF2F7; color:#2C4A70; border: 1px solid #9AB4D5; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gold-rule {
+      height: 3px;
+      width: 48px;
+      background: linear-gradient(90deg, #C8931A, #E8C040);
+      border-radius: 2px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* Group cards */
+    .group-card {
+      background: var(--white);
+      border: 1px solid rgba(26,16,8,0.07);
+      border-radius: 1.5rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .group-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(26,16,8,0.1);
+      border-color: rgba(200,147,26,0.3);
+    }
+
+    /* Timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #C8931A, rgba(200,147,26,0.1));
+    }
+
+    /* Benefit tier */
+    .benefit-card {
+      border: 1px solid rgba(26,16,8,0.08);
+      background: var(--white);
+      border-radius: 1.25rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .benefit-card:hover {
+      box-shadow: 0 12px 32px rgba(26,16,8,0.08);
+    }
+
+    /* Hero image overlay */
+    .hero-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(26,16,8,0.15) 0%,
+        rgba(26,16,8,0.5) 60%,
+        rgba(26,16,8,0.85) 100%
+      );
+    }
+
+    /* Sticky apply bar */
+    #apply-bar {
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    #apply-bar.visible {
+      transform: translateY(0);
+    }
+
+    /* Contact form */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      border: 1.5px solid rgba(26,16,8,0.12);
+      background: var(--white);
+      font-size: 0.875rem;
+      font-family: inherit;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(200,147,26,0.12);
+    }
+    .form-input::placeholder { color: #C0B0A0; }
+
+    /* FAQ accordion */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar" class="fixed top-0 inset-x-0 z-50" style="background: rgba(245,239,228,0.7); backdrop-filter: blur(8px);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[60px]">
+
+    <a href="index.html" class="flex items-center gap-2.5 group">
+      <div class="w-7 h-7 rounded-full btn-gold flex items-center justify-center text-xs font-bold leading-none">C</div>
+      <span class="font-serif text-sm font-semibold text-ink tracking-wide hidden sm:block">CGM 台中分部志工團</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-7 text-sm text-ink/70">
+      <a href="index.html#about" class="nav-link hover:text-ink">關於我們</a>
+      <a href="events.html"      class="nav-link hover:text-ink">活動總覽</a>
+      <a href="index.html#events" class="nav-link hover:text-ink">活動資訊</a>
+      <a href="index.html#contact" class="nav-link hover:text-ink">聯絡我們</a>
+    </div>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHnxAVn6IIgsQjBDUFIwoe6HWKgzBxIjotBGB7XuZqOeRIAg/viewform"
+       target="_blank" rel="noopener"
+       class="btn-gold px-5 py-2 rounded-full text-xs">立即報名</a>
+  </div>
+</nav>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="relative min-h-[85vh] flex items-end pt-[60px]">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img src="https://drive.google.com/thumbnail?id=15vDiMdTbqTYoqCIB-HQ2_EdKD-T6EfI6&sz=w1600"
+         alt="台中舊城青年志工招募" class="w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <!-- Back link -->
+  <div class="absolute top-20 left-5 sm:left-8 z-10">
+    <a href="index.html" class="inline-flex items-center gap-1.5 text-white/70 hover:text-white transition-colors text-xs font-medium">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      返回首頁
+    </a>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pb-14 w-full">
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="tag tag-terra">志工招募</span>
+        <span class="text-white/50 text-xs">2026/04/25 – 05/31</span>
+      </div>
+
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-white mb-5">
+        在舊城，<br>
+        <em class="not-italic" style="color: var(--gold-pale);">留下你的名字</em>
+      </h1>
+
+      <p class="text-white/70 text-base sm:text-lg leading-relaxed mb-4 max-w-lg">
+        2026 新富町文化擁護者招募中<br>
+        <span class="text-white/50 text-sm">CGM 台中分部 × 青年志工行動計畫</span>
+      </p>
+
+      <p class="text-white/55 text-sm leading-relaxed mb-8 max-w-md">
+        結合年度盛會鈴蘭通，發起給 <strong class="text-white/80">15–25 歲</strong>青年的志工行動計畫，提供影像紀錄、走讀導覽、永續手作、活動執行四組媒合，在參與中留下屬於你的故事。
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHnxAVn6IIgsQjBDUFIwoe6HWKgzBxIjotBGB7XuZqOeRIAg/viewform"
+           target="_blank" rel="noopener"
+           class="btn-gold px-8 py-3.5 rounded-full text-sm">立即報名志工</a>
+        <a href="#groups" class="btn-outline-white px-8 py-3.5 rounded-full text-sm">了解志工組別</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ QUICK INFO BAR ═══ -->
+<div class="bg-white border-b border-ink/6">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-5">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs text-ink/40 font-medium">招募期間</div>
+          <div class="text-sm font-semibold text-ink">04/25 – 05/31</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs text-ink/40 font-medium">招募對象</div>
+          <div class="text-sm font-semibold text-ink">15–25 歲青年</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs text-ink/40 font-medium">活動場域</div>
+          <div class="text-sm font-semibold text-ink">台中・鈴蘭通</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs text-ink/40 font-medium">報名費用</div>
+          <div class="text-sm font-semibold text-ink">免費</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ABOUT THE PROGRAM ═══ -->
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <div class="reveal">
+        <div class="section-label mb-4">About the Program</div>
+        <div class="gold-rule mb-6"></div>
+        <h2 class="font-display text-4xl sm:text-5xl text-ink leading-snug mb-6">
+          為什麼是<br>
+          <em class="not-italic text-gold-400">新富町</em>？
+        </h2>
+        <div class="space-y-4 text-ink/65 text-sm leading-relaxed">
+          <p>台中中區的鈴蘭通，曾是全台灣最繁華的商業街道之一。日治時代的建築、老市場的叫賣聲、三代同堂的職人手藝——這裡的每一個角落，都是一段還沒被說完的故事。</p>
+          <p>CGM 台中分部志工團選擇在這裡紮根，不只是因為它的歷史，更因為它正在發生改變：年輕人開始回來，空間開始被重新使用，社區開始重新連結。</p>
+          <p>我們需要的，是願意用自己的眼睛看見、用自己的行動記錄的你。</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 reveal" style="transition-delay: 0.15s;">
+        <div class="overflow-hidden rounded-2xl aspect-[3/4]">
+          <img src="https://drive.google.com/thumbnail?id=1JEYcH0CdvCxBAPDnls0-emGuKkOwCsCE&sz=w500"
+               alt="台中舊城" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="overflow-hidden rounded-2xl aspect-[3/4] mt-8">
+          <img src="https://drive.google.com/thumbnail?id=1HAroVh1JcGCMkvMP4y4eJR5QmfRG9cdH&sz=w500"
+               alt="志工活動" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ VOLUNTEER GROUPS ═══ -->
+<section id="groups" class="py-24" style="background: var(--cream);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-14 reveal">
+      <div class="section-label mb-4">Four Tracks</div>
+      <h2 class="font-display text-5xl text-ink mb-4">志工組別</h2>
+      <p class="text-ink/55 text-sm max-w-md mx-auto leading-relaxed">四個方向，找到最適合你的位置。不確定？報名時填寫你的興趣，我們會協助媒合。</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+      <!-- 影像紀錄 -->
+      <div class="group-card p-8 reveal">
+        <div class="w-12 h-12 rounded-2xl bg-terra-50 flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-terra-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <h3 class="font-display text-2xl text-ink">影像紀錄組</h3>
+          <span class="tag tag-terra flex-shrink-0">Photography</span>
+        </div>
+        <p class="text-ink/60 text-sm leading-relaxed mb-5">用鏡頭記錄鈴蘭通的人與故事。攝影、剪輯，或社群內容製作——把舊城的日常，變成可以留下來的影像。手機或相機皆可，零基礎歡迎。</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-terra-300 flex-shrink-0"></span>活動現場攝影記錄
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-terra-300 flex-shrink-0"></span>社群媒體素材製作
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-terra-300 flex-shrink-0"></span>職人故事影像採集
+          </li>
+        </ul>
+      </div>
+
+      <!-- 走讀導覽 -->
+      <div class="group-card p-8 reveal" style="transition-delay: 0.1s;">
+        <div class="w-12 h-12 rounded-2xl bg-gold-50 flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <h3 class="font-display text-2xl text-ink">走讀導覽組</h3>
+          <span class="tag tag-gold flex-shrink-0">Walking Tour</span>
+        </div>
+        <p class="text-ink/60 text-sm leading-relaxed mb-5">帶著參與者走進鈴蘭通的街道，說一段關於地方的故事。對歷史有熱情、喜歡與人交流，就是你最好的資格。</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-300 flex-shrink-0"></span>文化走讀路線規劃
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-300 flex-shrink-0"></span>導覽內容撰寫與口說
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-300 flex-shrink-0"></span>與地方職人互動串聯
+          </li>
+        </ul>
+      </div>
+
+      <!-- 永續手作 -->
+      <div class="group-card p-8 reveal" style="transition-delay: 0.05s;">
+        <div class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <h3 class="font-display text-2xl text-ink">永續手作組</h3>
+          <span class="tag tag-green flex-shrink-0">Sustainable Craft</span>
+        </div>
+        <p class="text-ink/60 text-sm leading-relaxed mb-5">結合永續設計與在地素材的手作工作坊，從舊衣重縫到環保創作。喜歡動手做、對永續議題有感，就來吧。</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>永續手作工作坊協助
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>舊衣改造課程教學支援
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>Re-bloom 時裝走秀支援</li>
+        </ul>
+      </div>
+
+      <!-- 活動執行 -->
+      <div class="group-card p-8 reveal" style="transition-delay: 0.15s;">
+        <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+          </svg>
+        </div>
+        <div class="flex items-start justify-between gap-4 mb-3">
+          <h3 class="font-display text-2xl text-ink">活動執行組</h3>
+          <span class="tag tag-slate flex-shrink-0">Event Ops</span>
+        </div>
+        <p class="text-ink/60 text-sm leading-relaxed mb-5">從場地布置、現場接待到流程協調——讓每一場活動順暢進行的幕後英雄。有組織能力、喜歡團隊合作，這裡最需要你。</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-300 flex-shrink-0"></span>活動現場布置與接待
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-300 flex-shrink-0"></span>流程協調與後勤支援
+          </li>
+          <li class="flex items-center gap-2.5 text-xs text-ink/55">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-300 flex-shrink-0"></span>封街走秀大型活動統籌
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ BENEFITS ═══ -->
+<section class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-14 reveal">
+      <div class="section-label mb-4">What You Get</div>
+      <h2 class="font-display text-5xl text-ink mb-4">志工回饋</h2>
+      <p class="text-ink/55 text-sm max-w-sm mx-auto">不只是一張服務時數證書，而是真正對你的成長有幫助的事。</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+      <!-- Basic tier -->
+      <div class="benefit-card p-8 reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-cream flex items-center justify-center font-display text-lg text-ink">01</div>
+          <div>
+            <div class="font-semibold text-ink text-sm">基本回饋</div>
+            <div class="text-ink/40 text-xs">所有志工皆享有</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-ink/5">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            志願服務時數認證
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-ink/5">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            活動全程餐點提供
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-ink/5">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            年度系列活動免費入場
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            CGM 限定文化擁護者紀念品
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhanced tier -->
+      <div class="benefit-card p-8 reveal border-gold-200" style="transition-delay: 0.1s; background: linear-gradient(135deg, #FEFCF8 0%, #FDF8E1 100%);">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-full btn-gold flex items-center justify-center font-display text-lg">02</div>
+          <div>
+            <div class="font-semibold text-ink text-sm">進階回饋</div>
+            <div class="text-ink/40 text-xs">積極參與的志工專屬</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-gold-100">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            職涯諮詢與方向引導
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-gold-100">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            推薦信撰寫（升學/求職）
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5 border-b border-gold-100">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            作品集曝光與宣傳協助
+          </div>
+          <div class="flex items-center gap-3 text-sm text-ink/70 py-2.5">
+            <svg class="w-4 h-4 text-gold-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            跨界人脈網絡資源對接
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FAQ ═══ -->
+<section class="py-20" style="background: var(--cream);">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+
+    <div class="text-center mb-12 reveal">
+      <div class="section-label mb-4">FAQ</div>
+      <h2 class="font-display text-4xl text-ink">常見問題</h2>
+    </div>
+
+    <div class="space-y-3 reveal">
+
+      <div class="faq-item bg-white rounded-2xl border border-ink/6 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-semibold text-ink text-sm">我沒有任何相關經驗，可以報名嗎？</span>
+          <svg class="faq-chevron w-4 h-4 text-ink/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-ink/60 text-sm leading-relaxed pb-5">完全可以！四個志工組別都歡迎零經驗的朋友加入。我們更在意你的熱情與參與意願，技能是可以在過程中慢慢培養的。</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-2xl border border-ink/6 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-semibold text-ink text-sm">志工需要投入多少時間？</span>
+          <svg class="faq-chevron w-4 h-4 text-ink/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-ink/60 text-sm leading-relaxed pb-5">依活動場次彈性參與，不需要全程出席所有活動。報名後我們會依你的時間安排媒合適合的場次，讓你在不影響學業或工作的前提下投入。</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-2xl border border-ink/6 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-semibold text-ink text-sm">我目前是學生，可以加入嗎？</span>
+          <svg class="faq-chevron w-4 h-4 text-ink/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-ink/60 text-sm leading-relaxed pb-5">當然！只要你在 15–25 歲的範圍內，不論是在學、就業或自由工作者都歡迎。志工服務時數可用於學校或相關認證。</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-2xl border border-ink/6 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-semibold text-ink text-sm">如果我想加入多個組別，可以嗎？</span>
+          <svg class="faq-chevron w-4 h-4 text-ink/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-ink/60 text-sm leading-relaxed pb-5">可以在報名表中勾選多個有興趣的組別，我們會根據你的時間與能力進行最適合的媒合，也可能跨組支援不同活動。</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-white rounded-2xl border border-ink/6 overflow-hidden">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-semibold text-ink text-sm">報名後什麼時候會收到通知？</span>
+          <svg class="faq-chevron w-4 h-4 text-ink/40 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-ink/60 text-sm leading-relaxed pb-5">報名截止（5/31）後，我們會在兩週內透過 Email 或 LINE 聯絡完成媒合的志工，說明後續的行前說明會時間與活動安排。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ VOLUNTEER FORM ═══ -->
+<section id="apply" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+    <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+      <!-- Left info -->
+      <div class="lg:col-span-2 reveal">
+        <div class="section-label mb-4">Sign Up</div>
+        <div class="gold-rule mb-6"></div>
+        <h2 class="font-display text-4xl text-ink mb-4">立即報名</h2>
+        <p class="text-ink/55 text-sm leading-relaxed mb-8">填寫報名表單，我們收到後會在兩週內（5/31 截止後）與你聯繫，說明後續安排。</p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3 text-sm">
+            <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="font-medium text-ink mb-0.5">報名截止</div>
+              <div class="text-ink/45 text-xs">2026 年 5 月 31 日</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 text-sm">
+            <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-medium text-ink mb-0.5">招募對象</div>
+              <div class="text-ink/45 text-xs">15–25 歲青年，零經驗歡迎</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 text-sm">
+            <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div class="font-medium text-ink mb-0.5">聯繫方式</div>
+              <div class="text-ink/45 text-xs">填表後由 Email 或 LINE 聯絡</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cream rounded-2xl p-5">
+          <p class="text-xs font-semibold text-ink/40 uppercase tracking-widest mb-3">志工組別</p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 text-xs text-ink/60 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-terra-400 flex-shrink-0"></span>影像紀錄組
+            </div>
+            <div class="flex items-center gap-2 text-xs text-ink/60 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0"></span>走讀導覽組
+            </div>
+            <div class="flex items-center gap-2 text-xs text-ink/60 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 flex-shrink-0"></span>永續手作組
+            </div>
+            <div class="flex items-center gap-2 text-xs text-ink/60 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>活動執行組
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="lg:col-span-3 reveal" style="transition-delay: 0.1s;">
+        <form id="volunteer-form" class="bg-cream rounded-3xl p-8 space-y-5" novalidate>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="v-name" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">姓名 <span class="text-terra-400">*</span></label>
+              <input id="v-name" name="name" type="text" required autocomplete="name" placeholder="你的名字"
+                     class="form-input">
+              <p class="error-msg hidden text-xs text-terra-500 mt-1.5">請填寫姓名</p>
+            </div>
+            <div>
+              <label for="v-email" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">Email <span class="text-terra-400">*</span></label>
+              <input id="v-email" name="email" type="email" required autocomplete="email" placeholder="your@email.com"
+                     class="form-input">
+              <p class="error-msg hidden text-xs text-terra-500 mt-1.5">請填寫有效的 Email</p>
+            </div>
+          </div>
+
+          <div>
+            <label for="v-age" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">年齡</label>
+            <select id="v-age" name="age" class="form-input cursor-pointer">
+              <option value="" disabled selected>請選擇年齡區間</option>
+              <option value="15-17">15–17 歲</option>
+              <option value="18-22">18–22 歲</option>
+              <option value="23-25">23–25 歲</option>
+              <option value="25+">25 歲以上</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="v-school" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">學校 / 公司</label>
+            <input id="v-school" name="school" type="text" autocomplete="organization" placeholder="就讀學校或任職公司"
+                   class="form-input">
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="v-instagram" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">IG 帳號</label>
+              <input id="v-instagram" name="instagram" type="text" autocomplete="off" placeholder="@your_handle"
+                     class="form-input">
+            </div>
+            <div>
+              <label for="v-phone" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">聯絡電話</label>
+              <input id="v-phone" name="phone" type="tel" autocomplete="tel" placeholder="0912-345-678"
+                     class="form-input">
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs font-semibold text-ink/50 uppercase tracking-wide mb-3">有興趣的志工組別 <span class="text-ink/30 normal-case font-normal">(可複選)</span></p>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
+                <input type="checkbox" name="interest" value="photography" class="w-3.5 h-3.5 accent-amber-600">
+                影像紀錄組
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
+                <input type="checkbox" name="interest" value="tour" class="w-3.5 h-3.5 accent-amber-600">
+                走讀導覽組
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
+                <input type="checkbox" name="interest" value="craft" class="w-3.5 h-3.5 accent-amber-600">
+                永續手作組
+              </label>
+              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
+                <input type="checkbox" name="interest" value="ops" class="w-3.5 h-3.5 accent-amber-600">
+                活動執行組
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="v-message" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">自我介紹 / 留言</label>
+            <textarea id="v-message" name="message" rows="4" placeholder="簡單介紹自己，或你對哪個組別最感興趣..."
+                      class="form-input resize-none"></textarea>
+          </div>
+
+          <button id="v-submit-btn" type="submit" class="btn-gold w-full py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 cursor-pointer">
+            <span id="v-btn-text">送出報名</span>
+            <svg id="v-btn-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <svg id="v-btn-spinner" class="w-4 h-4 hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>
+          </button>
+
+          <div id="v-form-success" class="hidden bg-white border border-green-200 rounded-xl p-5 text-center">
+            <div class="text-green-600 font-semibold text-sm mb-1">報名成功！</div>
+            <div class="text-green-500 text-xs">感謝你的報名，我們會在 5/31 截止後兩週內與你聯繫。</div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="py-12" style="background: var(--ink);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/8">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full btn-gold flex items-center justify-center text-xs font-bold">C</div>
+        <div>
+          <div class="font-serif text-white text-sm font-medium">CGM 台中分部志工團</div>
+          <div class="text-white/35 text-xs">台中舊城文化 × 志工行動</div>
+        </div>
+      </div>
+      <div class="flex gap-6 text-sm text-white/40">
+        <a href="index.html#about"   class="hover:text-white/70 transition-colors">關於我們</a>
+        <a href="events.html"        class="hover:text-white/70 transition-colors">活動總覽</a>
+        <a href="volunteer.html"     class="hover:text-white/70 transition-colors text-white/70">志工招募</a>
+        <a href="index.html#contact" class="hover:text-white/70 transition-colors">聯絡我們</a>
+      </div>
+      <div class="text-xs text-white/25 text-center">
+        <div>合作：臺中市新富町地方創生協會・青年永續領導力發展協會</div>
+        <div class="mt-1">© 2026 CGM 台中分部志工團. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Volunteer form
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycby202IbdGQVKiLyuz2AaoCYbThIJ5UTPAKXIHtlzPkWgoZz-7Sr3lEWOxBRZsnyQeYg/exec';
+
+  const vForm = document.getElementById('volunteer-form');
+  if (vForm) {
+    vForm.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+
+      const vName = vForm.querySelector('#v-name');
+      const vNameErr = vName.nextElementSibling;
+      if (!vName.value.trim()) {
+        vName.style.borderColor = '#C25330';
+        vNameErr.classList.remove('hidden');
+        valid = false;
+      } else {
+        vName.style.borderColor = '';
+        vNameErr.classList.add('hidden');
+      }
+
+      const vEmail = vForm.querySelector('#v-email');
+      const vEmailErr = vEmail.nextElementSibling;
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(vEmail.value)) {
+        vEmail.style.borderColor = '#C25330';
+        vEmailErr.classList.remove('hidden');
+        valid = false;
+      } else {
+        vEmail.style.borderColor = '';
+        vEmailErr.classList.add('hidden');
+      }
+
+      if (!valid) return;
+
+      const btn = document.getElementById('v-submit-btn');
+      document.getElementById('v-btn-text').textContent = '送出中…';
+      document.getElementById('v-btn-icon').classList.add('hidden');
+      document.getElementById('v-btn-spinner').classList.remove('hidden');
+      btn.disabled = true;
+
+      const interests = [...vForm.querySelectorAll('input[name="interest"]:checked')]
+        .map(cb => cb.value).join(', ');
+
+      const payload = {
+        name: vName.value.trim(),
+        email: vEmail.value.trim(),
+        age: vForm.querySelector('#v-age').value,
+        school: vForm.querySelector('#v-school').value.trim(),
+        instagram: vForm.querySelector('#v-instagram').value.trim(),
+        phone: vForm.querySelector('#v-phone').value.trim(),
+        interest: interests,
+        message: vForm.querySelector('#v-message').value.trim()
+      };
+
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        vForm.classList.add('hidden');
+        document.getElementById('v-form-success').classList.remove('hidden');
+      })
+      .catch(() => {
+        document.getElementById('v-btn-text').textContent = '送出失敗，請再試一次';
+        document.getElementById('v-btn-icon').classList.remove('hidden');
+        document.getElementById('v-btn-spinner').classList.add('hidden');
+        btn.disabled = false;
+        btn.style.background = '#C25330';
+      });
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked (if it wasn't open)
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

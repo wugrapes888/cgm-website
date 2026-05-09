@@ -1,0 +1,24 @@
+# 一般搜尋引擎
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap 位置
+Sitemap: https://yoursite.com/sitemap.xml
