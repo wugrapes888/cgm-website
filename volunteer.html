@@ -13,7 +13,7 @@
       theme: {
         extend: {
           colors: {
-            gold:  { 50:'#FDF8E1', 100:'#FBF0C0', 200:'#F5DC7A', 300:'#E8C040', 400:'#C8931A', 500:'#A87A10', 600:'#8A6208', 700:'#6A4C06' },
+            gold:  { 50:'#E8F6F5', 100:'#C9ECEB', 200:'#93D9D7', 300:'#5CC6C2', 400:'#3AABA3', 500:'#2E8E87', 600:'#23716B', 700:'#195451' },
             terra: { 50:'#FDF0EC', 100:'#FBDDD5', 200:'#F5B9A8', 300:'#EB8E74', 400:'#D96848', 500:'#C25330', 600:'#9E3F23', 700:'#7B2E18' },
             ink:   { DEFAULT:'#1A1008', light:'#3D2A18' },
             cream: { DEFAULT:'#F5EFE4', dark:'#EDE5D5' },
@@ -37,8 +37,8 @@
     :root {
       --cream: #F5EFE4;
       --ink: #1A1008;
-      --gold: #C8931A;
-      --gold-pale: #F0D98B;
+      --gold: #3AABA3;
+      --gold-pale: #C9ECEB;
       --stone: #9A8472;
       --white: #FEFCF8;
     }
@@ -54,15 +54,15 @@
     }
 
     .btn-gold {
-      background: linear-gradient(135deg, #C8931A 0%, #E8C040 50%, #C28010 100%);
-      color: #1A1008;
+      background: linear-gradient(135deg, #3AABA3 0%, #5CC6C2 50%, #2E8E87 100%);
+      color: #FEFCF8;
       font-weight: 600;
       letter-spacing: 0.04em;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .btn-gold:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(200,147,26,0.45);
+      box-shadow: 0 10px 28px rgba(58,171,163,0.45);
     }
 
     .btn-outline {
@@ -126,7 +126,7 @@
       text-transform: uppercase;
     }
     .tag-terra { background:#FDF0EC; color:#9E3F23; border: 1px solid #EB8E74; }
-    .tag-gold  { background:#FDF8E1; color:#8A6208; border: 1px solid #E8C040; }
+    .tag-gold  { background:#E8F6F5; color:#23716B; border: 1px solid #5CC6C2; }
     .tag-green { background:#EDF5EE; color:#2E6B3A; border: 1px solid #7DC48A; }
     .tag-slate { background:#EEF2F7; color:#2C4A70; border: 1px solid #9AB4D5; }
 
@@ -143,7 +143,7 @@
     .gold-rule {
       height: 3px;
       width: 48px;
-      background: linear-gradient(90deg, #C8931A, #E8C040);
+      background: linear-gradient(90deg, #3AABA3, #5CC6C2);
       border-radius: 2px;
     }
 
@@ -165,7 +165,7 @@
     .group-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 40px rgba(26,16,8,0.1);
-      border-color: rgba(200,147,26,0.3);
+      border-color: rgba(58,171,163,0.3);
     }
 
     /* Timeline */
@@ -176,7 +176,7 @@
       top: 0;
       bottom: 0;
       width: 2px;
-      background: linear-gradient(to bottom, #C8931A, rgba(200,147,26,0.1));
+      background: linear-gradient(to bottom, #3AABA3, rgba(58,171,163,0.1));
     }
 
     /* Benefit tier */
@@ -224,7 +224,7 @@
     }
     .form-input:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(200,147,26,0.12);
+      box-shadow: 0 0 0 3px rgba(58,171,163,0.12);
     }
     .form-input::placeholder { color: #C0B0A0; }
 
@@ -253,7 +253,7 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8 flex items-center justify-between h-[60px]">
 
     <a href="index.html" class="flex items-center gap-2.5 group">
-      <div class="w-7 h-7 rounded-full btn-gold flex items-center justify-center text-xs font-bold leading-none">C</div>
+      <img src="logo.jpg" alt="CGM 台中分部志工團" class="w-12 h-12 rounded-full object-cover">
       <span class="font-serif text-sm font-semibold text-ink tracking-wide hidden sm:block">CGM 台中分部志工團</span>
     </a>
 
@@ -264,9 +264,25 @@
       <a href="index.html#contact" class="nav-link hover:text-ink">聯絡我們</a>
     </div>
 
+    <div class="flex items-center gap-3">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHnxAVn6IIgsQjBDUFIwoe6HWKgzBxIjotBGB7XuZqOeRIAg/viewform"
+         target="_blank" rel="noopener"
+         class="btn-gold px-5 py-2 rounded-full text-xs">立即報名</a>
+      <button id="menu-btn" class="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-1.5 cursor-pointer" aria-label="選單" aria-expanded="false">
+        <span class="block w-5 h-0.5 bg-ink rounded transition-all duration-300"></span>
+        <span class="block w-5 h-0.5 bg-ink rounded transition-all duration-300"></span>
+        <span class="block w-3 h-0.5 bg-ink rounded transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden border-t border-ink/8 bg-cream/98 px-5 py-5 flex flex-col gap-4 text-sm">
+    <a href="index.html#about"   class="text-ink/70 hover:text-ink py-1 font-medium">關於我們</a>
+    <a href="events.html"        class="text-ink/70 hover:text-ink py-1 font-medium">活動總覽</a>
+    <a href="index.html#events"  class="text-ink/70 hover:text-ink py-1 font-medium">活動資訊</a>
+    <a href="index.html#contact" class="text-ink/70 hover:text-ink py-1 font-medium">聯絡我們</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHnxAVn6IIgsQjBDUFIwoe6HWKgzBxIjotBGB7XuZqOeRIAg/viewform"
        target="_blank" rel="noopener"
-       class="btn-gold px-5 py-2 rounded-full text-xs">立即報名</a>
+       class="btn-gold px-5 py-2.5 rounded-full text-center text-xs">立即報名</a>
   </div>
 </nav>
 
@@ -298,7 +314,7 @@
 
       <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-white mb-5">
         在舊城，<br>
-        <em class="not-italic" style="color: var(--gold-pale);">留下你的名字</em>
+        <em class="not-italic" style="color: #F5B9A8;">留下你的名字</em>
       </h1>
 
       <p class="text-white/70 text-base sm:text-lg leading-relaxed mb-4 max-w-lg">
@@ -391,7 +407,7 @@
                alt="台中舊城" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
         </div>
         <div class="overflow-hidden rounded-2xl aspect-[3/4] mt-8">
-          <img src="https://drive.google.com/thumbnail?id=1HAroVh1JcGCMkvMP4y4eJR5QmfRG9cdH&sz=w500"
+          <img src="https://drive.google.com/thumbnail?id=10nFjzUtC7MysJMqf9pY3zO49CLjpYeqe&sz=w500"
                alt="志工活動" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
@@ -560,7 +576,7 @@
       </div>
 
       <!-- Enhanced tier -->
-      <div class="benefit-card p-8 reveal border-gold-200" style="transition-delay: 0.1s; background: linear-gradient(135deg, #FEFCF8 0%, #FDF8E1 100%);">
+      <div class="benefit-card p-8 reveal border-teal-200" style="transition-delay: 0.1s; background: linear-gradient(135deg, #FEFCF8 0%, #E8F6F5 100%);">
         <div class="flex items-center gap-3 mb-6">
           <div class="w-10 h-10 rounded-full btn-gold flex items-center justify-center font-display text-lg">02</div>
           <div>
@@ -774,19 +790,19 @@
             <p class="text-xs font-semibold text-ink/50 uppercase tracking-wide mb-3">有興趣的志工組別 <span class="text-ink/30 normal-case font-normal">(可複選)</span></p>
             <div class="grid grid-cols-2 gap-2">
               <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="photography" class="w-3.5 h-3.5 accent-amber-600">
+                <input type="checkbox" name="interest" value="photography" class="w-3.5 h-3.5 accent-teal-600">
                 影像紀錄組
               </label>
               <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="tour" class="w-3.5 h-3.5 accent-amber-600">
+                <input type="checkbox" name="interest" value="tour" class="w-3.5 h-3.5 accent-teal-600">
                 走讀導覽組
               </label>
               <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="craft" class="w-3.5 h-3.5 accent-amber-600">
+                <input type="checkbox" name="interest" value="craft" class="w-3.5 h-3.5 accent-teal-600">
                 永續手作組
               </label>
               <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="ops" class="w-3.5 h-3.5 accent-amber-600">
+                <input type="checkbox" name="interest" value="ops" class="w-3.5 h-3.5 accent-teal-600">
                 活動執行組
               </label>
             </div>
@@ -821,7 +837,7 @@
   <div class="max-w-6xl mx-auto px-5 sm:px-8">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/8">
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-full btn-gold flex items-center justify-center text-xs font-bold">C</div>
+        <img src="logo.jpg" alt="CGM 台中分部志工團" class="w-9 h-9 rounded-full object-cover">
         <div>
           <div class="font-serif text-white text-sm font-medium">CGM 台中分部志工團</div>
           <div class="text-white/35 text-xs">台中舊城文化 × 志工行動</div>
@@ -832,9 +848,12 @@
         <a href="events.html"        class="hover:text-white/70 transition-colors">活動總覽</a>
         <a href="volunteer.html"     class="hover:text-white/70 transition-colors text-white/70">志工招募</a>
         <a href="index.html#contact" class="hover:text-white/70 transition-colors">聯絡我們</a>
+        <a href="https://www.instagram.com/cgm_taichung/" target="_blank" rel="noopener" class="hover:text-white/70 transition-colors" aria-label="Instagram">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
       </div>
       <div class="text-xs text-white/25 text-center">
-        <div>合作：臺中市新富町地方創生協會・青年永續領導力發展協會</div>
+        <div>合作夥伴：臺中市新富町地方創生協會・青年永續領導力發展協會</div>
         <div class="mt-1">© 2026 CGM 台中分部志工團. All rights reserved.</div>
       </div>
     </div>
@@ -848,6 +867,21 @@
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 30);
   }, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
