@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re:Bloom 青年共同策展招募｜立即報名</title>
+  <meta name="description" content="Re:Bloom 舊城永續時裝展青年共同策展招募頁，立即前往報名，加入台中舊城鈴蘭通的城市實驗。" />
+  <style>
+    :root{
+      --bg:#f6efe4;
+      --paper:#fffaf2;
+      --ink:#193f36;
+      --muted:#5f665f;
+      --accent:#cb5d2d;
+      --accent-dark:#a94820;
+      --green:#20493d;
+      --line:rgba(25,63,54,.12);
+      --shadow:0 16px 40px rgba(52,37,23,.12);
+      --radius:24px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:linear-gradient(180deg,#f7f1e8,#efe5d6);color:var(--ink);line-height:1.7}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(calc(100% - 28px),var(--max));margin:0 auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,241,232,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(25,63,54,.08)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;gap:12px}
+    .brand{font-weight:900;letter-spacing:.02em;color:var(--green)}
+    .nav-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;padding:11px 18px;border-radius:999px;font-weight:800;box-shadow:var(--shadow)}
+    .hero{padding:28px 0 30px}
+    .hero-grid{display:grid;grid-template-columns:.98fr 1.02fr;gap:26px;align-items:center}
+    .poster-card,.content-card,.info-card,.highlight-card,.faq-card,.form-card{background:rgba(255,250,242,.86);border:1px solid rgba(255,255,255,.65);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .poster-card{padding:14px}
+    .poster-card img{border-radius:18px}
+    .content-card{padding:30px}
+    .eyebrow{display:inline-block;background:rgba(32,73,61,.08);color:var(--green);padding:7px 12px;border-radius:999px;font-weight:800;font-size:.9rem}
+    h1{font-size:clamp(2.3rem,5.5vw,4.3rem);line-height:1.03;margin:14px 0 12px;letter-spacing:-.04em;color:var(--green)}
+    .sub{font-size:1.08rem;color:var(--muted);margin:0 0 20px}
+    .event-box{display:grid;gap:10px;margin:18px 0 6px;padding:16px;border-radius:22px;background:linear-gradient(135deg,rgba(32,73,61,.08),rgba(203,93,45,.08));border:1px solid rgba(32,73,61,.12)}
+    .mini{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.82)}
+    .mini strong{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:5px 10px;border-radius:999px;background:var(--green);color:#fff;font-size:.82rem;line-height:1.2;white-space:nowrap}
+    .mini span{font-weight:900;color:var(--green);font-size:1.05rem;line-height:1.45}
+    .cta-note{display:flex;align-items:center;gap:8px;margin-top:12px;color:var(--accent-dark);font-weight:900;font-size:.95rem}
+    .cta-note::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(203,93,45,.12)}
+    .cta-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:999px;font-weight:900;transition:.2s ease}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+    .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+    .btn-secondary{background:#fff;border:1px solid var(--line);color:var(--green)}
+    .section{padding:18px 0 34px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .info-card,.highlight-card,.faq-card{padding:22px}
+    h2{font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.15;margin:0 0 10px;color:var(--green)}
+    h3{margin:0 0 8px;font-size:1.1rem;color:var(--green)}
+    p{margin:0}
+    .section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:18px}
+    .section-head p{max-width:56ch;color:var(--muted)}
+    ul{margin:10px 0 0;padding-left:1.2em}
+    li+li{margin-top:6px}
+    .strip{background:var(--green);color:#fff;border-radius:22px;padding:18px 22px;font-weight:800;text-align:center;box-shadow:var(--shadow)}
+    .signup-panel{background:linear-gradient(135deg,#20493d,#2f6456);color:#fff;padding:28px;border-radius:28px;box-shadow:var(--shadow)}
+    .signup-panel p{color:rgba(255,255,255,.86)}
+    .signup-panel .btn-secondary{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.22);color:#fff}
+    .form-section{padding:26px 0 44px}
+    .form-shell{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px;align-items:start}
+    .form-card{padding:24px}
+    .contact-lead{color:var(--muted);margin-top:8px}
+    .contact-list{display:grid;gap:14px;margin:22px 0}
+    .contact-item{display:flex;gap:12px;align-items:flex-start}
+    .contact-icon{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:16px;background:#f1eadf;color:#2e8e87;font-weight:900}
+    .contact-item strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:2px}
+    .contact-item span{display:block;color:var(--muted);font-size:.92rem}
+    .official-card{background:#f1eadf;border:1px solid rgba(25,63,54,.08);border-radius:22px;padding:20px;margin-top:18px}
+    .official-card strong{display:block;color:#8a8177;font-size:.95rem;margin-bottom:12px}
+    .official-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;color:#6e665e;font-weight:800;border-top:1px solid rgba(25,63,54,.08)}
+    .official-link:first-of-type{border-top:0}
+    .official-link:hover{color:var(--accent-dark)}
+    .signup-form{background:#f2eadc;border-radius:32px;padding:32px;box-shadow:var(--shadow)}
+    .form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .form-group{margin-bottom:20px}
+    .form-group label,.choice-title{display:block;color:#7b746d;font-size:.88rem;font-weight:900;letter-spacing:.04em;margin-bottom:8px}
+    .required{color:var(--accent)}
+    .form-control{width:100%;min-height:58px;border:2px solid rgba(25,63,54,.12);border-radius:18px;background:#fffaf7;color:var(--ink);font:inherit;font-size:1rem;padding:14px 16px;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+    .form-control::placeholder{color:#b9aa9b}
+    .form-control:focus{border-color:#5bbdb5;box-shadow:0 0 0 4px rgba(91,189,181,.16);background:#fff}
+    textarea.form-control{min-height:132px;resize:vertical}
+    .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .choice{display:flex;align-items:center;gap:10px;min-height:54px;padding:13px 14px;border-radius:16px;border:1px solid rgba(25,63,54,.1);background:#fffaf7;color:var(--ink);font-weight:800;cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}
+    .choice:hover{border-color:#5bbdb5;background:#fff;transform:translateY(-1px)}
+    .choice input{width:16px;height:16px;accent-color:#2e8e87}
+    .submit-btn{width:100%;border:0;cursor:pointer;margin-top:4px}
+    .form-message{display:none;margin-top:16px;padding:16px;border-radius:16px;background:#fff;color:var(--green);font-weight:800;text-align:center;border:1px solid rgba(32,73,61,.14)}
+    footer{padding:28px 0 40px;color:var(--muted);font-size:.94rem}
+    .poster-inline{font-size:.95rem;color:var(--muted);margin-top:12px}
+    @media (max-width: 920px){
+      .hero-grid,.grid-3,.grid-5,.form-shell{grid-template-columns:1fr}
+      .event-box{grid-template-columns:1fr}
+    }
+    @media (max-width: 560px){
+      .mini{grid-template-columns:1fr;align-items:start}
+      .mini strong{justify-content:flex-start;width:max-content}
+      .content-card,.form-card{padding:24px}
+      .signup-form{padding:22px}
+      .form-row,.choice-grid{grid-template-columns:1fr}
+      .cta-group{flex-direction:column}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Re:Bloom 青年共同策展招募</div>
+      <a class="nav-cta" href="#signup-form">立即報名</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="poster-card">
+          <img src="poster.jpg" alt="Re:Bloom 舊城永續時裝展青年共同策展計畫海報" />
+          <p class="poster-inline">以海報主視覺為基礎，做成簡單直接的報名 landing page。</p>
+        </div>
+
+        <div class="content-card">
+          <span class="eyebrow">青年共同策展招募中</span>
+          <h1>青年共同策展，<br>讓舊城重新綻放</h1>
+          <p class="sub">Re:Bloom 不是辦一場活動，而是邀請青年走進台中舊城，把建築、服裝、影像與公共參與串成一次城市實驗。</p>
+
+          <div class="event-box">
+            <div class="mini">
+              <strong>活動地點</strong>
+              <span>台中舊城・鈴蘭通</span>
+            </div>
+            <div class="mini">
+              <strong>展覽日期</strong>
+              <span>2026 / 10 / 24（六）— 10 / 25（日）10:00–19:00</span>
+            </div>
+            <div class="mini">
+              <strong>招募身分</strong>
+              <span>青年共同策展夥伴</span>
+            </div>
+          </div>
+          <div class="cta-note">名額招募中，填表後由主辦單位聯繫媒合</div>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#signup-form">直接填寫報名表</a>
+            <a class="btn btn-secondary" href="#tracks">查看參與方向</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="strip">不是辦一場活動，而是一起完成一次城市實驗。</div>
+      </div>
+    </section>
+
+    <section class="section" id="tracks">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>五個共同策展方向</h2>
+          </div>
+          <p>依照海報主軸，報名表的組別應該對應策展內容，而不是只寫成一般志工分工。</p>
+        </div>
+        <div class="grid-5">
+          <article class="info-card">
+            <h3>街區策展</h3>
+            <p>從城市空間再走讀出發，觀察舊城街廓、建築與地方故事，轉化成展覽內容。</p>
+          </article>
+          <article class="info-card">
+            <h3>永續時裝</h3>
+            <p>以回收、再生、設計為核心，參與永續材料、服裝概念與展演呈現。</p>
+          </article>
+          <article class="info-card">
+            <h3>跨域共創</h3>
+            <p>和不同專長的青年與專業者一起行動，把建築、服裝、設計與社群串起來。</p>
+          </article>
+          <article class="info-card">
+            <h3>影像紀錄</h3>
+            <p>記錄舊城新故事，包含田野觀察、活動影像、人物訪談與短影音素材。</p>
+          </article>
+          <article class="info-card">
+            <h3>公共參與</h3>
+            <p>協助民眾走進、看見、參與舊城，讓展覽不只是觀看，而是共同發生。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>計畫亮點</h2>
+          </div>
+          <p>這些內容更接近海報下方的招募重點，也適合放進報名表讓參與者勾選興趣。</p>
+        </div>
+        <div class="grid-3">
+          <article class="highlight-card">
+            <h3>共同策展實作</h3>
+            <p>參與策展討論、街區觀察、內容整理與現場呈現，累積真實策展經驗。</p>
+          </article>
+          <article class="highlight-card">
+            <h3>永續材料裝置</h3>
+            <p>以永續材料、舊衣再生和設計轉譯，參與裝置或展演內容的創作。</p>
+          </article>
+          <article class="highlight-card">
+            <h3>街區展演與影像田野</h3>
+            <p>一起完成街區展演、舞台設計、影像田野紀錄與公共參與行動。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>你可以拿到什麼</h2>
+          </div>
+          <p>把海報上的參與者收穫轉成頁面資訊，讓報名者更快理解自己會得到什麼。</p>
+        </div>
+        <div class="grid-3">
+          <article class="faq-card">
+            <h3>真實經驗</h3>
+            <ul>
+              <li>真實街區實作經驗</li>
+              <li>跨域策展合作經驗</li>
+              <li>活動參與證明</li>
+            </ul>
+          </article>
+          <article class="faq-card">
+            <h3>個人成長</h3>
+            <ul>
+              <li>個人作品集素材</li>
+              <li>策展討論與實作經驗</li>
+              <li>青年行動社群連結</li>
+            </ul>
+          </article>
+          <article class="faq-card">
+            <h3>額外加值</h3>
+            <ul>
+              <li>建築 × 設計 × 服裝 × 影像跨域合作</li>
+              <li>更認識台中舊城與鈴蘭通</li>
+              <li>把行動經驗轉化為可被看見的成果</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="signup-form">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">客製報名表</span>
+            <h2>填寫 Re:Bloom 青年共同策展報名資料</h2>
+          </div>
+          <p>填寫表單加入 Re:Bloom 青年共同策展計畫，也可以前往官方網站查看 CGM 其他活動。</p>
+        </div>
+
+        <div class="form-shell">
+          <aside class="form-card">
+            <span class="eyebrow">Contact</span>
+            <h3 style="font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.08;margin-top:14px;">聯絡我們</h3>
+            <p class="contact-lead">有興趣加入或合作的夥伴，填寫右側表單，我們會盡快與你聯繫。也歡迎到 CGM 官方網站查看其他活動。</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon">IG</div>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>私訊小盒子，我們會盡快回覆</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">⌖</div>
+                <div>
+                  <strong>活動場域</strong>
+                  <span>台中市中區・鈴蘭通・第二市場周邊</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="official-card">
+              <strong>官方活動入口</strong>
+              <a class="official-link" href="https://wugrapes888.github.io/cgm-website/" target="_blank" rel="noreferrer">
+                <span>CGM 官方網站</span>
+                <span>查看全部活動 →</span>
+              </a>
+              <a class="official-link" href="https://wugrapes888.github.io/cgm-website/" target="_blank" rel="noreferrer">
+                <span>青年志工招募</span>
+                <span>前往官網 →</span>
+              </a>
+              <a class="official-link" href="https://wugrapes888.github.io/cgm-website/" target="_blank" rel="noreferrer">
+                <span>職人影像採集 / 街拍活動</span>
+                <span>前往官網 →</span>
+              </a>
+            </div>
+          </aside>
+
+          <form id="rebloom-form" class="signup-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">姓名 <span class="required">*</span></label>
+                <input id="name" name="name" class="form-control" type="text" autocomplete="name" placeholder="你的名字" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input id="email" name="email" class="form-control" type="email" autocomplete="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="age">年齡</label>
+                <select id="age" name="age" class="form-control">
+                  <option value="">請選擇年齡區間</option>
+                  <option value="15-17">15–17 歲</option>
+                  <option value="18-22">18–22 歲</option>
+                  <option value="23-25">23–25 歲</option>
+                  <option value="25+">25 歲以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="phone">聯絡電話</label>
+                <input id="phone" name="phone" class="form-control" type="tel" autocomplete="tel" placeholder="0912-345-678">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="school">學校 / 公司</label>
+              <input id="school" name="school" class="form-control" type="text" autocomplete="organization" placeholder="就讀學校或任職公司">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="instagram">IG 帳號</label>
+                <input id="instagram" name="instagram" class="form-control" type="text" placeholder="@your_handle">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <p class="choice-title">想參與的共同策展方向 <span style="font-weight:500;color:#8b847c;">(可複選)</span></p>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="tracks" value="街區策展">街區策展</label>
+                <label class="choice"><input type="checkbox" name="tracks" value="永續時裝">永續時裝</label>
+                <label class="choice"><input type="checkbox" name="tracks" value="跨域共創">跨域共創</label>
+                <label class="choice"><input type="checkbox" name="tracks" value="影像紀錄">影像紀錄</label>
+                <label class="choice"><input type="checkbox" name="tracks" value="公共參與">公共參與</label>
+                <label class="choice"><input type="checkbox" name="tracks" value="尚未確定">尚未確定，想再了解</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="experience">相關經驗 / 作品連結</label>
+              <textarea id="experience" name="experience" class="form-control" placeholder="可填寫建築、設計、服裝、影像、地方創生、社群活動等經驗，也可以貼作品集連結。"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="message">為什麼想加入 Re:Bloom？</label>
+              <textarea id="message" name="message" class="form-control" placeholder="簡單說說你對舊城、永續時裝或共同策展的興趣。"></textarea>
+            </div>
+
+            <label class="choice" style="margin-bottom:18px;">
+              <input id="consent" name="consent" type="checkbox" required>
+              我同意主辦單位為招募聯繫與活動通知使用以上資料 <span class="required">*</span>
+            </label>
+
+            <button class="btn btn-primary submit-btn" type="submit">送出報名表</button>
+            <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container signup-panel">
+        <h2 style="color:#fff;margin-bottom:10px;">準備好一起策展了嗎？</h2>
+        <p>如果你對舊城、永續時裝、影像紀錄或公共參與有興趣，請直接填寫上方表單。主辦單位可依你的興趣與時間媒合適合的共同策展任務。</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="#signup-form">回到報名表</a>
+          <a class="btn btn-secondary" href="https://www.accupass.com/event/2604251225463100249630" target="_blank" rel="noreferrer">查看 ACCUPASS 活動頁</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      本頁依據 Re:Bloom 海報主視覺與公開報名資訊整理，定位為簡化版招募落地頁，重點放在快速理解與立即報名。
+    </div>
+  </footer>
+
+  <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwREIwws3sR7PCZAoEzmzglwyIc2FdGKc1rrV2zkA5W7jA6qRNOiO26XhX8k72swjwo/exec';
+    const rebloomForm = document.getElementById('rebloom-form');
+    const formMessage = document.getElementById('form-message');
+
+    rebloomForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!rebloomForm.checkValidity()) {
+        rebloomForm.reportValidity();
+        return;
+      }
+
+      const tracks = [...rebloomForm.querySelectorAll('input[name="tracks"]:checked')]
+        .map((item) => item.value)
+        .join(', ');
+
+      const payload = {
+        formType: 'rebloom',
+        name: rebloomForm.name.value.trim(),
+        email: rebloomForm.email.value.trim(),
+        age: rebloomForm.age.value,
+        phone: rebloomForm.phone.value.trim(),
+        school: rebloomForm.school.value.trim(),
+        instagram: rebloomForm.instagram.value.trim(),
+        tracks,
+        experience: rebloomForm.experience.value.trim(),
+        message: rebloomForm.message.value.trim(),
+        consent: rebloomForm.consent.checked ? 'yes' : 'no',
+        submittedAt: new Date().toISOString()
+      };
+
+      formMessage.style.display = 'block';
+
+      if (!APPS_SCRIPT_URL) {
+        formMessage.textContent = '表單前端已完成。貼上 Google Apps Script URL 後，就能正式送出到 Google Sheets。';
+        return;
+      }
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        rebloomForm.reset();
+        formMessage.textContent = '已收到你的報名資料，我們會盡快與你聯繫。';
+      } catch (error) {
+        formMessage.textContent = '送出時發生問題，請稍後再試或改用 ACCUPASS 報名。';
+      }
+    });
+  </script>
+</body>
+</html>
