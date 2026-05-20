@@ -83,7 +83,8 @@
     .form-card{padding:24px}
     .contact-lead{color:var(--muted);margin-top:8px}
     .contact-list{display:grid;gap:14px;margin:22px 0}
-    .contact-item{display:flex;gap:12px;align-items:flex-start}
+    .contact-item{display:flex;gap:12px;align-items:flex-start;text-decoration:none;border-radius:18px;transition:background .2s ease,transform .2s ease}
+    .contact-item:hover{background:rgba(245,239,228,.58);transform:translateX(2px)}
     .contact-icon{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:16px;background:var(--bg);color:var(--gold);font-weight:700}
     .contact-item strong{display:block;color:var(--ink);font-size:1rem;margin-bottom:2px}
     .contact-item span{display:block;color:var(--muted);font-size:.92rem}
@@ -301,20 +302,20 @@
             <p class="contact-lead">有興趣加入或合作的夥伴，填寫右側表單，我們會盡快與你聯繫。也歡迎到 CGM 官方網站查看其他活動。</p>
 
             <div class="contact-list">
-              <div class="contact-item">
+              <a class="contact-item" href="https://www.instagram.com/cgm_taichung/" target="_blank" rel="noopener">
                 <div class="contact-icon">IG</div>
                 <div>
                   <strong>Instagram</strong>
                   <span>私訊小盒子，我們會盡快回覆</span>
                 </div>
-              </div>
-              <div class="contact-item">
+              </a>
+              <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E4%B8%AD%E5%B8%82%E4%B8%AD%E5%8D%80%20%E9%88%B4%E8%98%AD%E9%80%9A%20%E7%AC%AC%E4%BA%8C%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener">
                 <div class="contact-icon">⌖</div>
                 <div>
                   <strong>活動場域</strong>
                   <span>台中市中區・鈴蘭通・第二市場周邊</span>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div class="official-card">
