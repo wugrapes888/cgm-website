@@ -901,7 +901,7 @@
     <div class="flex flex-wrap gap-4 justify-center">
       <a href="https://www.accupass.com/event/2604251225463100249630" target="_blank" rel="noopener"
          class="btn-gold px-9 py-3.5 rounded-full text-sm">立即報名志工</a>
-      <a href="#contact" class="btn-outline-white px-9 py-3.5 rounded-full text-sm">聯絡我們</a>
+      <a href="https://www.instagram.com/cgm_taichung/" target="_blank" rel="noopener" class="btn-outline-white px-9 py-3.5 rounded-full text-sm">聯絡我們</a>
     </div>
 
     <!-- Volunteer group pills -->
@@ -922,14 +922,12 @@
 <section id="contact" class="py-24 bg-white">
   <div class="max-w-5xl mx-auto px-5 sm:px-8">
 
-    <div class="grid lg:grid-cols-5 gap-12 items-start">
+    <div class="max-w-2xl reveal">
 
-      <!-- Left info -->
-      <div class="lg:col-span-2 reveal">
         <div class="section-label mb-4">Contact</div>
         <div class="gold-rule mb-6"></div>
         <h2 class="font-display text-4xl text-ink mb-4">聯絡我們</h2>
-        <p class="text-ink/55 text-sm leading-relaxed mb-8">有興趣加入或合作的夥伴，填寫表單，我們會盡快與你聯繫。也歡迎透過各活動 Accupass 直接報名。</p>
+        <p class="text-ink/55 text-sm leading-relaxed mb-8">有興趣加入或合作的夥伴，歡迎透過 Instagram 私訊聯繫我們，也可以直接前往各活動 Accupass 報名。</p>
 
         <div class="space-y-4 mb-8">
           <div class="flex items-start gap-3 text-sm">
@@ -976,95 +974,6 @@
         </div>
       </div>
 
-      <!-- Right: form -->
-      <div class="lg:col-span-3 reveal" style="transition-delay: 0.1s;">
-        <form id="contact-form" class="bg-cream rounded-3xl p-8 space-y-5" novalidate>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label for="name" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">姓名 <span class="text-terra-400">*</span></label>
-              <input id="name" name="name" type="text" required autocomplete="name" placeholder="你的名字"
-                     class="form-input">
-              <p class="error-msg hidden text-xs text-terra-500 mt-1.5">請填寫姓名</p>
-            </div>
-            <div>
-              <label for="email" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">Email <span class="text-terra-400">*</span></label>
-              <input id="email" name="email" type="email" required autocomplete="email" placeholder="your@email.com"
-                     class="form-input">
-              <p class="error-msg hidden text-xs text-terra-500 mt-1.5">請填寫有效的 Email</p>
-            </div>
-          </div>
-
-          <div>
-            <label for="age" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">年齡</label>
-            <select id="age" name="age" class="form-input cursor-pointer">
-              <option value="" disabled selected>請選擇年齡區間</option>
-              <option value="15-17">15–17 歲</option>
-              <option value="18-22">18–22 歲</option>
-              <option value="23-25">23–25 歲</option>
-              <option value="25+">25 歲以上</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="school" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">學校 / 公司</label>
-            <input id="school" name="school" type="text" autocomplete="organization" placeholder="就讀學校或任職公司"
-                   class="form-input">
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label for="instagram" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">IG 帳號</label>
-              <input id="instagram" name="instagram" type="text" autocomplete="off" placeholder="@your_handle"
-                     class="form-input">
-            </div>
-            <div>
-              <label for="phone" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">聯絡電話</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="0912-345-678"
-                     class="form-input">
-            </div>
-          </div>
-
-          <div>
-            <p class="text-xs font-semibold text-ink/50 uppercase tracking-wide mb-3">有興趣的志工組別 <span class="text-ink/30 normal-case font-normal">(可複選)</span></p>
-            <div class="grid grid-cols-2 gap-2">
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="photography" class="w-3.5 h-3.5 accent-teal-600">
-                影像紀錄組
-              </label>
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="tour" class="w-3.5 h-3.5 accent-teal-600">
-                走讀導覽組
-              </label>
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="craft" class="w-3.5 h-3.5 accent-teal-600">
-                永續手作組
-              </label>
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-ink/8 bg-white cursor-pointer hover:border-gold-300 transition-colors text-xs text-ink/70">
-                <input type="checkbox" name="interest" value="ops" class="w-3.5 h-3.5 accent-teal-600">
-                活動執行組
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <label for="message" class="block text-xs font-semibold text-ink/50 uppercase tracking-wide mb-2">自我介紹 / 留言</label>
-            <textarea id="message" name="message" rows="4" placeholder="簡單介紹自己，或你對哪個活動最感興趣..."
-                      class="form-input resize-none"></textarea>
-          </div>
-
-          <button id="submit-btn" type="submit" class="btn-gold w-full py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 cursor-pointer">
-            <span id="btn-text">送出表單</span>
-            <svg id="btn-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            <svg id="btn-spinner" class="w-4 h-4 hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>
-          </button>
-
-          <div id="form-success" class="hidden bg-white border border-green-200 rounded-xl p-5 text-center">
-            <div class="text-green-600 font-semibold text-sm mb-1">感謝你的表單！</div>
-            <div class="text-green-500 text-xs">我們已收到你的訊息，會盡快與你聯繫。</div>
-          </div>
-        </form>
-      </div>
 
     </div>
   </div>
@@ -1132,78 +1041,6 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // ── Contact form ──
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycby202IbdGQVKiLyuz2AaoCYbThIJ5UTPAKXIHtlzPkWgoZz-7Sr3lEWOxBRZsnyQeYg/exec';
-
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      let valid = true;
-
-      const name = form.querySelector('#name');
-      const nameErr = name.nextElementSibling;
-      if (!name.value.trim()) {
-        name.style.borderColor = '#C25330';
-        nameErr.classList.remove('hidden');
-        valid = false;
-      } else {
-        name.style.borderColor = '';
-        nameErr.classList.add('hidden');
-      }
-
-      const email = form.querySelector('#email');
-      const emailErr = email.nextElementSibling;
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.style.borderColor = '#C25330';
-        emailErr.classList.remove('hidden');
-        valid = false;
-      } else {
-        email.style.borderColor = '';
-        emailErr.classList.add('hidden');
-      }
-
-      if (!valid) return;
-
-      const btn = document.getElementById('submit-btn');
-      document.getElementById('btn-text').textContent = '送出中…';
-      document.getElementById('btn-icon').classList.add('hidden');
-      document.getElementById('btn-spinner').classList.remove('hidden');
-      btn.disabled = true;
-
-      const interests = [...form.querySelectorAll('input[name="interest"]:checked')]
-        .map(cb => cb.value).join(', ');
-
-      const payload = {
-        name: name.value.trim(),
-        email: email.value.trim(),
-        age: form.querySelector('#age').value,
-        school: form.querySelector('#school').value.trim(),
-        instagram: form.querySelector('#instagram').value.trim(),
-        phone: form.querySelector('#phone').value.trim(),
-        interest: interests,
-        message: form.querySelector('#message').value.trim()
-      };
-
-      fetch(SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      .then(() => {
-        form.classList.add('hidden');
-        document.getElementById('form-success').classList.remove('hidden');
-      })
-      .catch(() => {
-        document.getElementById('btn-text').textContent = '送出失敗，請再試一次';
-        document.getElementById('btn-icon').classList.remove('hidden');
-        document.getElementById('btn-spinner').classList.add('hidden');
-        btn.disabled = false;
-        btn.style.background = '#C25330';
-      });
-    });
-  }
 </script>
 
 </body>
